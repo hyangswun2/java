@@ -5,17 +5,16 @@ public class Main {
         System.out.println(LCM(1, 20));
     }
 
-    private static int LCM(int start, int end) {
-        int lcm = 1;
-        for (int i = start; i <= end; i++) lcm = getLCM(lcm, i);
+    private static long LCM(int start, int end) {
+        long lcm = start;
+        for (int i = start + 1; i <= end; i++) lcm = getLCM(lcm, i);
         return lcm;
     }
 
-    private static int getLCM(int a, int b) {
+    private static long getLCM(long a, long b) {
         return (a * b) / getGCD(a, b);
     }
-
-    private static int getGCD(int a, int b) {
+    private static long getGCD(long a, long b) {
         if (b == 0) return a;
         else return getGCD(b, a % b);
     }
