@@ -54,7 +54,7 @@ public class Main {
                 p.main();
                 return;
             }
-            System.out.println("Phone Number not found.");
         }
+        System.out.println("Phone Number not found.");
     }
 }

@@ -14,6 +14,7 @@ public class Contact {
     Map<String, String> getContacts() {
         return contacts;
     }
+
     void main() {
         while(true) {
             contactUI();
@@ -42,19 +43,19 @@ public class Contact {
         System.out.print("Select Number : ");
     }
     void contacts() {
-        if(contacts.isEmpty()) {
+        if(getContacts().isEmpty()) {
             System.out.println("=================================");
             System.out.println("Add Contacts First!");
             return;
         }
         System.out.println("=================================");
-        contacts.forEach((name, num) -> System.out.println(name + " " + num));
+        getContacts().forEach((name, num) -> System.out.println(name + " " + num));
     }
     void addContact() {
         System.out.println("=================================");
         System.out.print("Enter Name : ");
         String getName = sc.next();
-        for(String name : contacts.keySet()) {
+        for(String name : getContacts().keySet()) {
             if(getName.equals(name)) {
                 System.out.println("=================================");
                 System.out.println("This Name is already Stored.");
@@ -63,33 +64,33 @@ public class Contact {
         }
         System.out.print("Enter Number : ");
         String getNum = sc.next();
-        for(String num : contacts.values()) {
+        for(String num : getContacts().values()) {
             if(getNum.equals(num)) {
                 System.out.println("=================================");
                 System.out.println("This Number is already Stored.");
                 return;
             }
         }
-        contacts.put(getName, getNum);
+        getContacts().put(getName, getNum);
         System.out.println("=================================");
         System.out.println("Added Contact : " + getName + " " + getNum);
     }
     void delContact() {
-        if(contacts.isEmpty()) {
+        if(getContacts().isEmpty()) {
             System.out.println("=================================");
             System.out.println("Add Contacts First!");
             return;
         }
         System.out.println("=================================");
-        contacts.forEach((name, num) -> System.out.println(name + " " + num));
+        getContacts().forEach((name, num) -> System.out.println(name + " " + num));
         System.out.println("=================================");
         System.out.print("Enter Name to Delete : ");
         String temp = sc.next();
 
-        if(contacts.containsKey(temp)) {
+        if(getContacts().containsKey(temp)) {
             System.out.println("=================================");
-            System.out.println("Deleted Contact : " + temp + " " + contacts.get(temp));
-            contacts.remove(temp);
+            System.out.println("Deleted Contact : " + temp + " " + getContacts().get(temp));
+            getContacts().remove(temp);
         } else {
             System.out.println("=================================");
             System.out.println(String.format("'%s' doesn't exist in Contacts", temp));
