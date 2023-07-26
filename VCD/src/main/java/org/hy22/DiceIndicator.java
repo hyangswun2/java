@@ -1,4 +1,4 @@
-package org.example;
+package org.hy22;
 
 import javax.swing.*;
 import java.awt.*;
@@ -47,9 +47,11 @@ class DiceIndicator extends JLabel {
         diceNumsH = new HashMap<>();
 
         for (int i = 1; i <= 6; i++) {
-            ImageIcon diceNum = new ImageIcon("src/resources/dice" + i + ".png");
+            ImageIcon diceNum = new ImageIcon(getClass().getResource("/dice" + i + ".png"));
+            //ImageIcon diceNum = new ImageIcon("src/resources/dice" + i + ".png");
             diceNums.put(i, convert(diceNum));
-            ImageIcon diceNumH = new ImageIcon("src/resources/Hdice_" + i + ".png");
+            ImageIcon diceNumH = new ImageIcon(getClass().getResource("/Hdice_" + i + ".png"));
+            //ImageIcon diceNumH = new ImageIcon("src/resources/Hdice_" + i + ".png");
             diceNumsH.put(i, convert(diceNumH));
         }
 

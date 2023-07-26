@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'org.example'
+group = 'org.hy22'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -10,8 +10,8 @@ repositories {
 }
 
 dependencies {
-    implementation files('src/resources/jna-5.13.0.jar')
-    implementation files('src/resources/jna-platform-5.13.0.jar')
+    implementation files('src/main/resources/jna-5.13.0.jar')
+    implementation files('src/main/resources/jna-platform-5.13.0.jar')
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }

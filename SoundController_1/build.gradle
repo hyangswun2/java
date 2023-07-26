@@ -10,10 +10,11 @@ repositories {
 }
 
 dependencies {
-    implementation files('src/resources/jna-5.13.0.jar')
-    implementation files('src/resources/jna-platform-5.13.0.jar')
+    implementation files('src/main/Resources/jna-5.13.0.jar')
+    implementation files('src/main/Resources/jna-platform-5.13.0.jar')
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
 }
 
 test {
